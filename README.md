@@ -10,13 +10,6 @@ This is a **Habit Tracker** app built using **Redux** for state management and *
 - **Persist state** with Redux to ensure data is saved across sessions.
 - Clean and **intuitive UI** for better user experience.
   
-## Demo
-
-[Insert a demo link here if hosted]
-
-## Screenshots
-
-[Add screenshots here to showcase your app]
 
 ## Tech Stack
 
@@ -49,6 +42,7 @@ Follow these steps to run the project on your local machine:
    ```bash
    npm run dev
   ```
+
 
 The app will open at http://localhost:5173 in your browser.
 
