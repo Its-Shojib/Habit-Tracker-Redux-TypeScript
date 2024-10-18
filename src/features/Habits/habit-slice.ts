@@ -1,24 +1,38 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+
+export interface Habit {
+    id: string;
+    name: string;
+    frequency: "daily" | "weekly";
+    completedDates: string[];
+    createdAt: string;
+}
+interface HabitState {
+    habits: Habit[],
+}
+
+const initialState: HabitState = {
+    habits: [],
+};
 
 export const habitSlice = createSlice({
-    name: 'habit',
-    initialState: { value: 0 },
+    name: 'habits',
+    initialState,
     reducers: {
-        increment: (state) => {
-            state.value++;
+        addHabit: (state, action: PayloadAction<{ name: string; frequency: "daily" | "weekly" }>) => {
+            const newHabit: Habit = {
+                id: Date.now().toString(),
+                name: action.payload.name,
+                frequency: action.payload.frequency,
+                completedDates: [],
+                createdAt: new Date().toISOString(),
+            }
+            state.habits.push(newHabit);
         },
-        decrement: (state) => {
-            state.value--;
-        },
-        reset: (state) => {
-            state.value = 0;
-        },
-        incrementByAmmount: (state, action) => {
-            state.value += action.payload;
-        }
     }
 })
 
-export const { increment, decrement, reset, incrementByAmmount } = habitSlice.actions;
+export const { addHabit } = habitSlice.actions;
 
 export default habitSlice.reducer;
