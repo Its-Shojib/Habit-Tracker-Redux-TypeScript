@@ -26,23 +26,21 @@ Follow these steps to run the project on your local machine:
 
    ```bash
    git clone https://github.com/its-shojib/Habit-Tracker-Redux-TypeScript.git
-   ```
+
 2. Navigate to the project directory:
    
    ```bash
    cd Habit-Tracker-Redux-TypeScript
-   ```
+
 3. Install The dependencies
    
    ```bash
    npm install --save
-   ```
+
 4. Run the app in development mode
    
    ```bash
    npm run dev
-  ```
-
 
 The app will open at http://localhost:5173 in your browser.
 
