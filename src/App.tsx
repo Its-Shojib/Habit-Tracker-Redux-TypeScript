@@ -8,8 +8,8 @@ function App() {
 
   return (
     <Container maxWidth='md'>
-      <Typography component='h1' variant='h2' align='center' >
-        Welcome to Habit Tracker!
+      <Typography component='h2' variant='h3' align='center' >
+        Habit Tracker!
       </Typography>
 
       <AddHabitForm />

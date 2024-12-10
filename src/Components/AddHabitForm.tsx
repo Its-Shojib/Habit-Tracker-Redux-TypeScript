@@ -11,9 +11,8 @@ const AddHabitForm: React.FC = () => {
 
     const dispatch = useDispatch<AppDispatch>();
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e:React.FormEvent) => {
         e.preventDefault();
-        // Add the new habit to the store
         if(name.trim()){
             dispatch(addHabit({
                 name,
