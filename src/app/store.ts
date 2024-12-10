@@ -4,7 +4,6 @@ import habitReducer from '../features/Habits/habit-slice'
 
 const store =  configureStore({
     reducer: {
-        // Define your reducers here
         habit: habitReducer,
     },
 })
